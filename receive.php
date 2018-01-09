@@ -7,7 +7,7 @@
  $sender_txt = $json_obj->events[0]->message->text;
  $sender_replyToken = $json_obj->events[0]->replyToken;
 
-
+ $line_server_url = 'https://api.line.me/v2/bot/message/push';
  //用sender_txt來分辨要發何種訊息
  switch ($sender_txt) {
     		case "push":
@@ -57,7 +57,7 @@
  //回傳給line server
  $header[] = "Content-Type: application/json";
  $header[] = "Authorization: Bearer f8PLCI+wQUVAFeGmUS82X+7zymOS5+fctH6TR/Aq2+DCY0sLRdK752ksw59Rv2cPcdSbgGJBI5UDOowPG/hbOK3kPCN/azlGBa6dznSD4SgQmD4Ft4un4MBSEjCZjthO85uSlOrE9/id1Cok2LmzzgdB04t89/1O/w1cDnyilFU=";
- $ch = curl_init("https://api.line.me/v2/bot/message/reply");                                                                      
+ $ch = curl_init($line_server_url);
  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));                                                                  
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
