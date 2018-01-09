@@ -10,7 +10,7 @@
 				"messages" => array (
 					array (
 						"type" => "text",
-						"text" => "Hello, you daid ".$sender_txt
+						"text" => "Hello, 你說的是 ".$sender_txt
 					)
 				)
 		);
