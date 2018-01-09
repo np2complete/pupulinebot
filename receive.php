@@ -65,9 +65,9 @@ $header[] = "Content-Type: application/json";
 			);
 
 
- $myfile2 = fopen("log2.txt","w+") or die("Unable to open file!"); //設定一個log.txt 用來印訊息
- fwrite($myfile2, "\xEF\xBB\xBF".json_encode($response)); //在字串前加入\xEF\xBB\xBF轉成utf8格式
- fclose($myfile2);
+ //$myfile2 = fopen("log2.txt","w+") or die("Unable to open file!"); //設定一個log.txt 用來印訊息
+ //fwrite($myfile2, "\xEF\xBB\xBF".json_encode($response)); //在字串前加入\xEF\xBB\xBF轉成utf8格式
+ //fclose($myfile2);
 
  //回傳給line server
  $header[] = "Content-Type: application/json";
