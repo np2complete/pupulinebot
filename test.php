@@ -1,3 +1,3 @@
-<?
-echo 'i'm alive!!';
+<?php
+echo "i'm alive!!";
 ?>
